@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-01-09">
+<meta name="dcterms.date" content="2025-01-10">
 
 <title>AD Project Serum - Modeling &amp; Assessing Lipid Added Value</title>
 <style>
@@ -200,7 +200,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul class="collapse">
   <li><a href="#sec-LR1" id="toc-sec-LR1" class="nav-link" data-scroll-target="#sec-LR1">Model Likelihood Ratio Statistic (LR)</a></li>
   <li><a href="#nested-likelihood-ratio-test" id="toc-nested-likelihood-ratio-test" class="nav-link" data-scroll-target="#nested-likelihood-ratio-test">Nested Likelihood Ratio Test</a></li>
-  <li><a href="#relative-explained-variation-rev" id="toc-relative-explained-variation-rev" class="nav-link" data-scroll-target="#relative-explained-variation-rev">Relative Explained Variation (REV)</a></li>
+  <li><a href="#sec-REV1" id="toc-sec-REV1" class="nav-link" data-scroll-target="#sec-REV1">Relative Explained Variation (REV)</a></li>
   <li><a href="#sec-modelUpdate1" id="toc-sec-modelUpdate1" class="nav-link" data-scroll-target="#sec-modelUpdate1">Model Update 1 - Testing For Non-linearities &amp; Interactions</a></li>
   <li><a href="#updated-partial-dependence-risk-profiles" id="toc-updated-partial-dependence-risk-profiles" class="nav-link" data-scroll-target="#updated-partial-dependence-risk-profiles">Updated Partial Dependence Risk Profiles</a></li>
   <li><a href="#test---adding-the-other-lr-test-significant-lipids-in-the-model" id="toc-test---adding-the-other-lr-test-significant-lipids-in-the-model" class="nav-link" data-scroll-target="#test---adding-the-other-lr-test-significant-lipids-in-the-model">Test - Adding The Other LR Test Significant Lipids In The Model</a></li>
@@ -208,7 +208,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#network-graph-estimates" id="toc-network-graph-estimates" class="nav-link" data-scroll-target="#network-graph-estimates">Network Graph Estimates</a>
   <ul class="collapse">
   <li><a href="#model-likelihood-ratio-statistic-lr" id="toc-model-likelihood-ratio-statistic-lr" class="nav-link" data-scroll-target="#model-likelihood-ratio-statistic-lr">Model Likelihood Ratio Statistic (LR)</a></li>
-  <li><a href="#model-update-2---network-index-expanded-model-with-interactions" id="toc-model-update-2---network-index-expanded-model-with-interactions" class="nav-link" data-scroll-target="#model-update-2---network-index-expanded-model-with-interactions">Model Update 2 - Network Index Expanded Model With Interactions</a></li>
+  <li><a href="#model-update-2---expanded-model" id="toc-model-update-2---expanded-model" class="nav-link" data-scroll-target="#model-update-2---expanded-model">Model Update 2 - Expanded Model</a></li>
   <li><a href="#updated-partial-dependence-risk-profiles-1" id="toc-updated-partial-dependence-risk-profiles-1" class="nav-link" data-scroll-target="#updated-partial-dependence-risk-profiles-1">Updated Partial Dependence Risk Profiles</a></li>
   <li><a href="#proportional-odds-assumption-po-1" id="toc-proportional-odds-assumption-po-1" class="nav-link" data-scroll-target="#proportional-odds-assumption-po-1">Proportional Odds Assumption (PO)</a></li>
   </ul></li>
@@ -232,7 +232,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 9, 2025</p>
+      <p class="date">January 10, 2025</p>
     </div>
   </div>
   
@@ -897,7 +897,7 @@ Factors in Final Model
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-fmodel2_fastbw2_AgeLinear_bw-calibration-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -933,7 +933,7 @@ Figure&nbsp;3: Actual versus predicted probabilities for the reduced model havin
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2" data-layout-nrow="1">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-nrow="1" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-fmodel2_fastbw2_AgeLinear_bw-pdp1-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -967,7 +967,7 @@ Figure&nbsp;5: Risk of having AD when either in HC or MCI state. Different curve
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2" data-layout-nrow="1">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-nrow="1" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-fmodel2_fastbw2_AgeLinear_bw-pdp2-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -1001,7 +1001,7 @@ Figure&nbsp;7: Risk of having AD when either in HC or MCI state, and Age is 73.
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2" data-layout-nrow="1">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-nrow="1" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-fmodel2_fastbw2_AgeLinear_bw-pdp3-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -1032,7 +1032,7 @@ Figure&nbsp;9: Risk of having AD when either in HC or MCI state, and Age is 43.
 </section>
 </section>
 </section>
-<section id="added-value-from-lipids" class="level1" data-number="3">
+<section id="added-value-from-lipids" class="level1 page-columns page-full" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Added Value From Lipids</h1>
 <p>Below three procedures of assessing lipid added value to the predictive performance of a model after adjusting for the clinical information of the <code>Age</code> &amp; <code>Mental_DisorderV2</code> variables.</p>
 <p>The first procedure below is used to identify the biomarker candidate(s), while the other two procedures expand on the selected cases i.e.&nbsp;lipid(s).</p>
@@ -2677,8 +2677,8 @@ Figure&nbsp;11: Bootstrap distribution of Chi-Square LR statistics from 3 degree
 </div>
 </div>
 </section>
-<section id="relative-explained-variation-rev" class="level2">
-<h2 class="anchored" data-anchor-id="relative-explained-variation-rev">Relative Explained Variation (REV)</h2>
+<section id="sec-REV1" class="level2">
+<h2 class="anchored" data-anchor-id="sec-REV1">Relative Explained Variation (REV)</h2>
 <p>Conducting an <code>anova</code> on the model containing <code>Age</code>, <code>Mental_DisorderV2</code> and <code>FFA_10_2</code> gives the <code>Chi-Square</code> statistic which is an indicator of variable importance. This was seen previously on the table called <code>Wald Statistics for groupV2</code> above. Relative explained variation is a procedure that estimates the accuracy of these statistics under repeated sampling, and produces confidence intervals for them:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -2699,7 +2699,7 @@ Figure&nbsp;12: It can be seen that there is overlap in the confidence regions o
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="1" data-layout-nrow="2">
+<div class="cell quarto-layout-panel" data-layout-ncol="1" data-layout-nrow="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
 <div id="fig-with-without-risk-probs-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -2733,7 +2733,7 @@ Figure&nbsp;14: Risk of having AD when either in HC or MCI state. See previous p
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="1" data-layout-nrow="2">
+<div class="cell quarto-layout-panel" data-layout-ncol="1" data-layout-nrow="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
 <div id="fig-with-without-risk-diff-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -2767,7 +2767,7 @@ Figure&nbsp;16: Risk probability difference for the risk of AD between the with 
 <section id="sec-modelUpdate1" class="level2">
 <h2 class="anchored" data-anchor-id="sec-modelUpdate1">Model Update 1 - Testing For Non-linearities &amp; Interactions</h2>
 <p>The previous model that includes the <code>FFA_10_2</code> lipid to the <code>Age</code> &amp; <code>Mental_DisorderV2</code> base model, is now expanded with terms involving non-linearities and interactions, and then a backward term selection procedure is aplied in order to identify the best terms to keep in the model.</p>
-<p>It seems that an interaction between the <code>FFA_10_2</code> lipid with both <code>Age</code> &amp; <code>Mental_DisorderV2</code> is plausible as the backward selection procedure kept terms involving these interactions. The interaction of <code>FFA_10_2</code> with <code>Age</code> can also be inferred from the plot <code>Age ~ LN3 | group</code> in the data processing page. Below is the model update.</p>
+<p>It seems that an interaction between the <code>FFA_10_2</code> lipid with both <code>Age</code> &amp; <code>Mental_DisorderV2</code> is plausible as the backward selection procedure kept terms involving these interactions. The interaction of <code>FFA_10_2</code> with <code>Age</code> can also be inferred from the plot <code>Age ~ LN3 | group</code> in the data processing page. Below is the model update as well as the REV analysis as in section <a href="#sec-REV1" class="quarto-xref">Section&nbsp;3.3</a>.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>Logistic Regression Model
@@ -2799,7 +2799,7 @@ Figure&nbsp;16: Risk probability difference for the risk of AD between the with 
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-f_LN3_nonl_int-bw-calibration-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -2827,13 +2827,27 @@ Figure&nbsp;18: Actual versus predicted probabilities for the base model includi
 </div>
 </div>
 </div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-added_value_rev2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-added_value_rev2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="modeling_lipid_added_value_files/figure-html/fig-added_value_rev2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-added_value_rev2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;19: It can be seen that there is overlap in the confidence regions of each predictor. Due to the small sample size of <strong><em>155</em></strong> observations, the intervals are quite wide. Compared to the previous model, now <strong><em>FFA_10_2</em></strong> aka LN3 has surpassed <strong><em>Age</em></strong> in importance, and it accounts for <strong><em>38%</em></strong> of the REV.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="updated-partial-dependence-risk-profiles" class="level2">
 <h2 class="anchored" data-anchor-id="updated-partial-dependence-risk-profiles">Updated Partial Dependence Risk Profiles</h2>
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2" data-layout-nrow="3">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-nrow="3" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-upd-pdp-1-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -2842,7 +2856,7 @@ Figure&nbsp;18: Actual versus predicted probabilities for the base model includi
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-1-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-upd-pdp-1-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;19: Risk of condition severity: When in HC status, the probability of having either MCI or AD status. Dependence on FFA_10_2 and adjusted for Age at 43 or 73 years. The shadows denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
+Figure&nbsp;20: Risk of condition severity: When in HC status, the probability of having either MCI or AD status. Dependence on FFA_10_2 and adjusted for Age at 43 or 73 years. The shadows denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
 </figcaption>
 </figure>
 </div>
@@ -2854,7 +2868,7 @@ Figure&nbsp;19: Risk of condition severity: When in HC status, the probability o
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-1-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-upd-pdp-1-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;20: Risk of having AD when either in HC or MCI state. Dependence on FFA_10_2 and adjusted for Age at 43 or 73 years. The shadows denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
+Figure&nbsp;21: Risk of having AD when either in HC or MCI state. Dependence on FFA_10_2 and adjusted for Age at 43 or 73 years. The shadows denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
 </figcaption>
 </figure>
 </div>
@@ -2868,7 +2882,7 @@ Figure&nbsp;20: Risk of having AD when either in HC or MCI state. Dependence on 
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-1-3.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-upd-pdp-1-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;21: Risk of condition severity: When in HC status, the probability of having either MCI or AD status. Dependence on Mental_DisorderV2 and adjusted for Age at 43 or 73 years. The lines denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
+Figure&nbsp;22: Risk of condition severity: When in HC status, the probability of having either MCI or AD status. Dependence on Mental_DisorderV2 and adjusted for Age at 43 or 73 years. The lines denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
 </figcaption>
 </figure>
 </div>
@@ -2880,7 +2894,7 @@ Figure&nbsp;21: Risk of condition severity: When in HC status, the probability o
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-1-4.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-upd-pdp-1-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;22: Risk of having AD when either in HC or MCI state. Dependence on Mental_DisorderV2 and adjusted for Age at 43 or 73 years. The lines denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
+Figure&nbsp;23: Risk of having AD when either in HC or MCI state. Dependence on Mental_DisorderV2 and adjusted for Age at 43 or 73 years. The lines denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
 </figcaption>
 </figure>
 </div>
@@ -2894,7 +2908,7 @@ Figure&nbsp;22: Risk of having AD when either in HC or MCI state. Dependence on 
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-1-5.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-upd-pdp-1-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;23: Risk of condition severity: When in HC status, the probability of having either MCI or AD status. Dependence on FFA_10_2 and adjusted for Age at 73 years and Mental_DisorderV2. The shadows denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
+Figure&nbsp;24: Risk of condition severity: When in HC status, the probability of having either MCI or AD status. Dependence on FFA_10_2 and adjusted for Age at 73 years and Mental_DisorderV2. The shadows denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
 </figcaption>
 </figure>
 </div>
@@ -2906,7 +2920,7 @@ Figure&nbsp;23: Risk of condition severity: When in HC status, the probability o
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-1-6.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-upd-pdp-1-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;24: Risk of having AD when either in HC or MCI state. Dependence on FFA_10_2 and adjusted for Age at 73 years and Mental_DisorderV2. The shadows denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
+Figure&nbsp;25: Risk of having AD when either in HC or MCI state. Dependence on FFA_10_2 and adjusted for Age at 73 years and Mental_DisorderV2. The shadows denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
 </figcaption>
 </figure>
 </div>
@@ -2916,7 +2930,7 @@ Figure&nbsp;24: Risk of having AD when either in HC or MCI state. Dependence on 
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="1" data-layout-nrow="2">
+<div class="cell quarto-layout-panel" data-layout-ncol="1" data-layout-nrow="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
 <div id="fig-upd-pdp-2-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -2925,7 +2939,7 @@ Figure&nbsp;24: Risk of having AD when either in HC or MCI state. Dependence on 
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-upd-pdp-2-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;25: Risk of condition severity: When in HC status, the probability of having either MCI or AD status. Dependence on FFA_10_2 and adjusted for Age at 43 and 73 years as well as Mental_DisorderV2. The shadows denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
+Figure&nbsp;26: Risk of condition severity: When in HC status, the probability of having either MCI or AD status. Dependence on FFA_10_2 and adjusted for Age at 43 and 73 years as well as Mental_DisorderV2. The shadows denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
 </figcaption>
 </figure>
 </div>
@@ -2939,7 +2953,7 @@ Figure&nbsp;25: Risk of condition severity: When in HC status, the probability o
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-2-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-upd-pdp-2-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;26: Risk of having AD when either in HC or MCI state. Dependence on FFA_10_2 and adjusted for Age at 43 and 73 years as well as Mental_DisorderV2. The shadows denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
+Figure&nbsp;27: Risk of having AD when either in HC or MCI state. Dependence on FFA_10_2 and adjusted for Age at 43 and 73 years as well as Mental_DisorderV2. The shadows denote 90% and 10% quantiles of the confidence interval i.e.&nbsp;the central 80%. A light blue dashed line at the 50% likelihood marks the transition to higher risk territory.
 </figcaption>
 </figure>
 </div>
@@ -3010,7 +3024,7 @@ LN111 -0.3001981 -0.2249528  1.0000000</code></pre>
 <div aria-describedby="fig-PO-score.binary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-score.binary" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-score.binary-1" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-score.binary-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-score.binary-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-score.binary-1.png" id="fig-PO-score.binary-1" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-score.binary" width="672">
@@ -3022,7 +3036,7 @@ LN111 -0.3001981 -0.2249528  1.0000000</code></pre>
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-score.binary" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-score.binary-2" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-score.binary-2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-score.binary-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-score.binary-2.png" id="fig-PO-score.binary-2" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-score.binary" width="672">
@@ -3034,7 +3048,7 @@ LN111 -0.3001981 -0.2249528  1.0000000</code></pre>
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-score.binary" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-score.binary-3" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-score.binary-3" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-score.binary-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-score.binary-3.png" id="fig-PO-score.binary-3" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-score.binary" width="672">
@@ -3048,7 +3062,7 @@ LN111 -0.3001981 -0.2249528  1.0000000</code></pre>
 </div>
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-score.binary" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-score.binary-4" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-score.binary-4" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-score.binary-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-score.binary-4.png" id="fig-PO-score.binary-4" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-score.binary" width="672">
@@ -3060,7 +3074,7 @@ LN111 -0.3001981 -0.2249528  1.0000000</code></pre>
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-score.binary" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-score.binary-5" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-score.binary-5" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-score.binary-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-score.binary-5.png" id="fig-PO-score.binary-5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-score.binary" width="672">
@@ -3074,7 +3088,7 @@ LN111 -0.3001981 -0.2249528  1.0000000</code></pre>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-PO-score.binary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;27: Model residuals i.e.&nbsp;comparing observed with predicted responses for each excess grouping ie. MCI and AD. Mean +- 1.96 standard errors are also shown. PO assumption is violated when the mean values of the residuals for each group MCI and AD deviate from each other i.e.&nbsp;they are not on the same horizontal level.
+Figure&nbsp;28: Model residuals i.e.&nbsp;comparing observed with predicted responses for each excess grouping ie. MCI and AD. Mean +- 1.96 standard errors are also shown. PO assumption is violated when the mean values of the residuals for each group MCI and AD deviate from each other i.e.&nbsp;they are not on the same horizontal level.
 </figcaption>
 </figure>
 </div>
@@ -3084,7 +3098,7 @@ Figure&nbsp;27: Model residuals i.e.&nbsp;comparing observed with predicted resp
 <div aria-describedby="fig-PO-partial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-partial" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-partial-1" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-partial-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-partial-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-partial-1.png" id="fig-PO-partial-1" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-partial" width="672">
@@ -3096,7 +3110,7 @@ Figure&nbsp;27: Model residuals i.e.&nbsp;comparing observed with predicted resp
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-partial" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-partial-2" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-partial-2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-partial-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-partial-2.png" id="fig-PO-partial-2" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-partial" width="672">
@@ -3108,7 +3122,7 @@ Figure&nbsp;27: Model residuals i.e.&nbsp;comparing observed with predicted resp
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-partial" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-partial-3" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-partial-3" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-partial-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-partial-3.png" id="fig-PO-partial-3" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-partial" width="672">
@@ -3122,7 +3136,7 @@ Figure&nbsp;27: Model residuals i.e.&nbsp;comparing observed with predicted resp
 </div>
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-partial" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-partial-4" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-partial-4" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-partial-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-partial-4.png" id="fig-PO-partial-4" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-partial" width="672">
@@ -3134,7 +3148,7 @@ Figure&nbsp;27: Model residuals i.e.&nbsp;comparing observed with predicted resp
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-partial" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-partial-5" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-partial-5" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-partial-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-partial-5.png" id="fig-PO-partial-5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-partial" width="672">
@@ -3148,7 +3162,7 @@ Figure&nbsp;27: Model residuals i.e.&nbsp;comparing observed with predicted resp
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-PO-partial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;28: Partial model residuals i.e.&nbsp;when adjusting for the other predictors in the model. PO assumption is violated when the curves are not parallel to each other.
+Figure&nbsp;29: Partial model residuals i.e.&nbsp;when adjusting for the other predictors in the model. PO assumption is violated when the curves are not parallel to each other.
 </figcaption>
 </figure>
 </div>
@@ -3225,7 +3239,7 @@ Upper 0.079 -0.052 0.165</code></pre>
 <p>Looking at the AIC statistic (the lower the better) and the low p-value for the chi^2 test for PO of <code>0.0021</code>, it seems that it would be valuable to relax the PO assumption for the <code>Mental_DisorderV2</code> variable in the model. <strong>However, due to the data restrictions at lower ages, currently this relaxation is not done.</strong></p>
 <p>Note that the above test for PO analysis was also done for the variables <code>Age</code> and <code>LN3 (FFA_10_2)</code>, and the results did not show any violation of the PO assumption.</p>
 </section>
-<section id="network-graph-estimates" class="level2">
+<section id="network-graph-estimates" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="network-graph-estimates">Network Graph Estimates</h2>
 <p>This section presents another approach in biomarker discovery that is based on partial correlation networks.</p>
 <p>In a separate analysis, partial correlation network graphs were estimated for each of the three groups, using the following procedure:</p>
@@ -3261,7 +3275,7 @@ Upper 0.079 -0.052 0.165</code></pre>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-network-graphs-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;29
+Figure&nbsp;30
 </figcaption>
 </figure>
 </div>
@@ -3276,7 +3290,7 @@ Figure&nbsp;29
 </div>
 </div>
 </div>
-<section id="model-likelihood-ratio-statistic-lr" class="level3">
+<section id="model-likelihood-ratio-statistic-lr" class="level3 page-columns page-full">
 <h3 class="anchored" data-anchor-id="model-likelihood-ratio-statistic-lr">Model Likelihood Ratio Statistic (LR)</h3>
 <p>As done previously for the raw lipid concentrations, each lipid index is added separately in a model that includes <code>Age</code> &amp; <code>Mental_DisorderV2</code> as predictors, and the model’s <code>LR</code> statistic is extracted. Then the lipid indices are ranked so that top ranks correspond to the highest <code>LR</code> values. Below is a histogram showing the distribution of the LR statistics.</p>
 <div class="cell" data-layout-align="center">
@@ -3306,7 +3320,7 @@ highest: 100.00159, 100.77005, 101.06177, 101.78193, 103.37762
 <img src="modeling_lipid_added_value_files/figure-html/fig-LR_added_value_net3groups-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-LR_added_value_net3groups-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;30: Distribution of Chi-Square LR statistics from 3 to 5 degrees of freedom models, having Age, Mental_DisorderV2 and each lipid index separately as predictor variables. The index corresponds to the lipid being conditional on the other lipids in the network. Nine lipid indices can be seen to have a higher than <strong><em>94.73</em></strong> LR value i.e.&nbsp;the highest LR value that was previously found when the <strong><em>FFA_10_2</em></strong> lipid was considered in isolation.
+Figure&nbsp;31: Distribution of Chi-Square LR statistics from 3 to 5 degrees of freedom models, having Age, Mental_DisorderV2 and each lipid index separately as predictor variables. The index corresponds to the lipid being conditional on the other lipids in the network. Nine lipid indices can be seen to have a higher than <strong><em>94.73</em></strong> LR value i.e.&nbsp;the highest LR value that was previously found when the <strong><em>FFA_10_2</em></strong> lipid was considered in isolation.
 </figcaption>
 </figure>
 </div>
@@ -3536,7 +3550,7 @@ TOTAL
 <img src="modeling_lipid_added_value_files/figure-html/fig-Net_LR_added_value_boot-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="1056">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Net_LR_added_value_boot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;31: Bootstrap distribution of Chi-Square LR statistics from 5 degrees of freedom models, having Age, Mental_DisorderV2 and each lipid index of disease severity group separately as predictor variables. For the index of lipid FFA_10_2, the model spends 3 degrees of freedom as only one of the group indices is needed. Comparison between the selected FFA_10_2 i.e.&nbsp;LN3 lipid index with the rest of the 383 lipids. It can be seen that there is bimodality and that the selected lipid separates itself towards higher LR values compared to the other lipids. The separation is more evident when compared to the one obtained from the model containing the lipid in isolation i.e.&nbsp;see <a href="#fig-LR_added_value_boot" class="quarto-xref">Figure&nbsp;11</a> using the vertical dashed lines for comparison.
+Figure&nbsp;32: Bootstrap distribution of Chi-Square LR statistics from 5 degrees of freedom models, having Age, Mental_DisorderV2 and each lipid index of disease severity group separately as predictor variables. For the index of lipid FFA_10_2, the model spends 3 degrees of freedom as only one of the group indices is needed. Comparison between the selected FFA_10_2 i.e.&nbsp;LN3 lipid index with the rest of the 383 lipids. It can be seen that there is bimodality and that the selected lipid separates itself towards higher LR values compared to the other lipids. The separation is more evident when compared to the one obtained from the model containing the lipid in isolation i.e.&nbsp;see <a href="#fig-LR_added_value_boot" class="quarto-xref">Figure&nbsp;11</a> using the vertical dashed lines for comparison.
 </figcaption>
 </figure>
 </div>
@@ -3558,7 +3572,10 @@ Figure&nbsp;31: Bootstrap distribution of Chi-Square LR statistics from 5 degree
 </div>
 </div>
 <p>The <code>FFA_10_2</code> lipid index happens to be in the top <code>22</code> rank about <code>80%</code> of the time.</p>
-<p>The model based on the <code>FFA_10_2</code> lipid index only uses <code>3</code> degrees of freedom, just like was the case when the lipid was considered in isolation previously. However, the rest of the indices are based on a <code>5</code> degrees of freedom model. Hence it is expected that they will have a higher LR statistic i.e.&nbsp;better model fit. To make the comparison more fair, a pooled anova version is used below such that for each of the above indices a pooled version of the p-value estimate is calculated i.e.&nbsp;the p-values of each index in the triplet <code>lipidNet_HC:lipidNet_MCI:lipidNet_AD</code> are pooled together. When this is done and then the resulting pooled p-value is <code>FDR</code> adjusted, the remaining significant indices are as follows:</p>
+
+<div class="no-row-height column-margin column-container"><div class="">
+<p>The model &amp; analysis shown in this section for the <code>FFA_10_2</code> lipid index aka <code>LN3_HC</code> indicates that a network index can provide added predictive value when compared to the raw lipid concentration variable <code>FFA_10_2</code> aka <code>LN3</code>. This does not mean that the lipid index should necessarily replace the raw concentration in the model. A result of the following section is that when accounting for the interaction of the lipid with <code>Age</code> &amp; <code>Mental_DisorderV2</code> variables, then it is better to keep the raw lipid concentration in the model instead of the its index version.</p>
+</div></div><p>The model based on the <code>FFA_10_2</code> lipid index only uses <code>3</code> degrees of freedom, just like was the case when the lipid was considered in isolation previously. However, the rest of the indices are based on a <code>5</code> degrees of freedom model. Hence it is expected that they will have a higher LR statistic i.e.&nbsp;better model fit. To make the comparison more fair, a pooled anova version is used below such that for each of the above indices a pooled version of the p-value estimate is calculated i.e.&nbsp;the p-values of each index in the triplet <code>lipidNet_HC:lipidNet_MCI:lipidNet_AD</code> are pooled together. When this is done and then the resulting pooled p-value is <code>FDR</code> adjusted, the remaining significant indices are as follows:</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
@@ -3637,7 +3654,7 @@ Figure&nbsp;31: Bootstrap distribution of Chi-Square LR statistics from 5 degree
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/PE_18_0:18_0_aka_LN109_lipid_network.png" class="img-fluid figure-img"></p>
-<figcaption>PE_18_0:18_0 (aka LN109) lipid index on network. The index becomes isolated or conditionally independent with disease severity.</figcaption>
+<figcaption><code>PE(18:0/18:0)</code> (aka LN109) lipid index on network. The index becomes isolated or conditionally independent with disease severity.</figcaption>
 </figure>
 </div>
 </div>
@@ -3647,7 +3664,7 @@ Figure&nbsp;31: Bootstrap distribution of Chi-Square LR statistics from 5 degree
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/PE_18_0:18_2_aka_LN111_lipid_network.png" class="img-fluid figure-img"></p>
-<figcaption>PE_18_0:18_2 (aka LN111) lipid index on network. The index shows a reduction in the number of connections (i.e.&nbsp;entropy) to other lipid indices with disease severity.</figcaption>
+<figcaption><code>PE(18:0/18:2)</code> (aka LN111) lipid index on network. The index shows a reduction in the number of connections (i.e.&nbsp;entropy) to other lipid indices with disease severity.</figcaption>
 </figure>
 </div>
 </div>
@@ -3657,7 +3674,7 @@ Figure&nbsp;31: Bootstrap distribution of Chi-Square LR statistics from 5 degree
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/PC_18_0:18_0_pos_aka_LP158_lipid_network.png" class="img-fluid figure-img"></p>
-<figcaption>PC_18_0:18_0_pos (aka LP158) lipid index on network. A similar case as with the lipid index of PE_18_0:18_0 (aka LN109) above. At the MCI state the two lipid indices are connected with each other.</figcaption>
+<figcaption><code>PC(18:0/18:0)_pos</code> (aka LP158) lipid index on network. A similar case as with the lipid index of PE_18_0:18_0 (aka LN109) above. At the MCI state the two lipid indices are connected with each other.</figcaption>
 </figure>
 </div>
 </div>
@@ -3667,21 +3684,21 @@ Figure&nbsp;31: Bootstrap distribution of Chi-Square LR statistics from 5 degree
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="images/SM_d18_1:22_1_aka_LP180_lipid_network.png" class="img-fluid figure-img"></p>
-<figcaption>SM_d18_1:22_1 (aka LP180) lipid index on network. The index characterizes a major split in the network occuring at the AD state.</figcaption>
+<figcaption><code>SM(d18:1/22:1)</code> (aka LP180) lipid index on network. The index characterizes a major split in the network occuring at the AD state.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-network-graphs-index-lipids-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;32
+Figure&nbsp;33
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="model-update-2---network-index-expanded-model-with-interactions" class="level3">
-<h3 class="anchored" data-anchor-id="model-update-2---network-index-expanded-model-with-interactions">Model Update 2 - Network Index Expanded Model With Interactions</h3>
-<p>Continuing from section <a href="#sec-modelUpdate1" class="quarto-xref">Section&nbsp;3.4</a> and the above results, additional lipids are entered into the model and tested for their contribution using a backward stepwise elimination process. The lipids are entered in both their raw concentration form if they are shown to be conditionally independent in the network or in their lipid index form in case they have connections within the network. The criteria for lipid selection in the model are out of sample performance, control for overfitting the sample data, as well as how good the predicted probabilities are calibrated.</p>
+<section id="model-update-2---expanded-model" class="level3">
+<h3 class="anchored" data-anchor-id="model-update-2---expanded-model">Model Update 2 - Expanded Model</h3>
+<p>Continuing from section <a href="#sec-modelUpdate1" class="quarto-xref">Section&nbsp;3.4</a> and the above results, additional lipids are entered into the model and tested for their predictive contribution using a backward stepwise elimination process. The lipids are entered in both their raw concentration form if they are shown to be conditionally independent in the network or in their lipid index form in case they have connections within the network. Interactions amongst the variables are also considered while respecting the 12 degrees of freedom cap before significant overfitting occurs. The criteria for lipid selection in the model are out of sample performance, control for overfitting the sample data, as well as how good the predicted probabilities are calibrated.</p>
 <p>The resulting model is as follows:</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -3715,7 +3732,7 @@ Figure&nbsp;32
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-f_LN3_Net3groups_nonl_int_bw-calibration-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -3724,7 +3741,7 @@ Figure&nbsp;32
 <img src="modeling_lipid_added_value_files/figure-html/fig-f_LN3_Net3groups_nonl_int_bw-calibration-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-f_LN3_Net3groups_nonl_int_bw-calibration-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;33: Actual versus predicted probabilities for the base model including the <strong><em>FFA_10_2</em></strong> lipid as predictor, its interaction with both <strong><em>Age</em></strong> and <strong><em>Mental_DisorderV2</em></strong> as well as the lipids PE(18:0/18:0) and PC(18:0/18:0)_pos. The x-axis indicates the risk severity probability. There are regions of predicted probability where the expectation would be of a bit worse performance from the apparent one i.e.&nbsp;the one based on the observed sample data. There is some underestimation below the <strong><em>0.65</em></strong> predicted value, while there is some overestimation for predicted values above this threshold.
+Figure&nbsp;34: Actual versus predicted probabilities for the base model including the <strong><em>FFA_10_2</em></strong> lipid as predictor, its interaction with both <strong><em>Age</em></strong> and <strong><em>Mental_DisorderV2</em></strong> as well as the lipids <strong><em><code>PE(18:0/18:0)</code></em></strong> and <strong><em><code>PC(18:0/18:0)_pos</code></em></strong>. The x-axis indicates the risk severity probability. There are regions of predicted probability where the expectation would be of a bit worse performance from the apparent one i.e.&nbsp;the one based on the observed sample data. There is some underestimation below the <strong><em>0.65</em></strong> predicted value, while there is some overestimation for predicted values above this threshold.
 </figcaption>
 </figure>
 </div>
@@ -3736,10 +3753,24 @@ Figure&nbsp;33: Actual versus predicted probabilities for the base model includi
 <img src="modeling_lipid_added_value_files/figure-html/fig-f_LN3_Net3groups_nonl_int_bw-calibration-2.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-f_LN3_Net3groups_nonl_int_bw-calibration-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;34: Actual versus predicted probabilities for the base model including the <strong><em>FFA_10_2</em></strong> lipid as predictor, its interaction with both <strong><em>Age</em></strong> and <strong><em>Mental_DisorderV2</em></strong> as well as the lipids PE(18:0/18:0) and PC(18:0/18:0)_pos. The x-axis indicates the risk severity probability. The model appears well calibrated with small mean absolute error. Compared to the model of section 3.4, there is a reduction in mean absolute error of about <strong><em>82%</em></strong>.
+Figure&nbsp;35: Actual versus predicted probabilities for the base model including the <strong><em>FFA_10_2</em></strong> lipid as predictor, its interaction with both <strong><em>Age</em></strong> and <strong><em>Mental_DisorderV2</em></strong> as well as the lipids <strong><em><code>PE(18:0/18:0)</code></em></strong> and <strong><em><code>PC(18:0/18:0)_pos</code></em></strong>. The x-axis indicates the risk severity probability. The model appears well calibrated with small mean absolute error. Compared to the model of section 3.4, there is a reduction in mean absolute error of about <strong><em>82%</em></strong>.
 </figcaption>
 </figure>
 </div>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-added_value_rev3" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-added_value_rev3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="modeling_lipid_added_value_files/figure-html/fig-added_value_rev3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-added_value_rev3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;36: It can be seen that there is overlap in the confidence regions of each predictor. Due to the small sample size of <strong><em>155</em></strong> observations, the intervals are quite wide. <strong><em>FFA_10_2</em></strong> aka LN3 accounts for <strong><em>30%</em></strong> of the REV.
+</figcaption>
+</figure>
 </div>
 </div>
 </div>
