@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-06-10">
+<meta name="dcterms.date" content="2025-06-17">
 
 <title>AD Project Serum - Modeling &amp; Assessing Lipid Added Value</title>
 <style>
@@ -232,7 +232,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 10, 2025</p>
+      <p class="date">June 17, 2025</p>
     </div>
   </div>
   
@@ -838,7 +838,7 @@ Figure&nbsp;1: The further away the central estimate and its corresponding inter
 </section>
 <section id="variable-selection" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="variable-selection">Variable Selection</h2>
-<p>From the variable effects above, <code>Age</code> and <code>Mental_DisorderV2</code> seem to be the variables that contribute them most in the model. For assessing lipid added value, a more parsimonious model can be used that best approximates the full model above. In order to so this, a stepwise backward selection procedure is applied with the following results.</p>
+<p>From the variable effects above, <code>Age</code> and <code>Mental_DisorderV2</code> seem to be the variables that contribute the most in the model. For assessing lipid added value, a more parsimonious model can be used that best approximates the full model above. In order to so this, a stepwise backward selection procedure is applied with the following results.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -940,7 +940,7 @@ Figure&nbsp;3: Actual versus predicted probabilities for the reduced model havin
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2" data-layout-nrow="1">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-nrow="1" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-fmodel2_fastbw2_AgeLinear_bw-pdp1-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -974,7 +974,7 @@ Figure&nbsp;5: Risk of having AD when either in HC or MCI state. Different curve
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2" data-layout-nrow="1">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-nrow="1" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-fmodel2_fastbw2_AgeLinear_bw-pdp2-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -1008,7 +1008,7 @@ Figure&nbsp;7: Risk of having AD when either in HC or MCI state, and Age is 73.
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2" data-layout-nrow="1">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-nrow="1" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-fmodel2_fastbw2_AgeLinear_bw-pdp3-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -1252,7 +1252,7 @@ TOTAL
 <img src="modeling_lipid_added_value_files/figure-html/fig-LR_added_value_boot-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="960">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-LR_added_value_boot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;11: Bootstrap distribution of Chi-Square LR statistics from 3 degrees of freedom models, having Age, Mental_DisorderV2 and each lipid separately as predictor variables. Comparison between the selected FFA_10_2 i.e.&nbsp;LN3 lipid with the rest of the 382 lipids. It can be seen that there is bimodality and that the selected lipid separates itself towards higher LR values compared to the other lipids. The separation though, while significant, is not striking.
+Figure&nbsp;11: Bootstrap distribution of Chi-Square LR statistics from 3 degrees of freedom models, having Age, Mental_DisorderV2 and each lipid separately as predictor variables. Comparison between the selected FFA_10_2 i.e.&nbsp;LN3 lipid with the rest of the 382 lipids. It can be seen that there is bimodality and that the selected lipid separates itself towards higher LR values compared to the other lipids. The separation though, while significant, is not striking. The vertical dashed lines denote the 34th and 85th quantiles (~50%) of the Chi-Square LR values from the FFA_10_2 distribution.
 </figcaption>
 </figure>
 </div>
@@ -2703,11 +2703,11 @@ Figure&nbsp;12: It can be seen that there is overlap in the confidence regions o
 </div>
 </div>
 <p>The <code>FFA_10_2</code> lipid adds a fraction of <code>0.18</code> of new diagnostic information to <code>Age</code> and <code>Mental_DisorderV2</code>. In terms of percentage to total <code>REV</code>, this is 29% compared to the model’s total of <code>64%</code>.</p>
-<p>To further visualize the diagnostic yield of <code>FFA_10_2</code>, the plot below estimates the <code>with FFA_10_2</code> vs <code>without FFA_10_2</code> risk probability for each of the threes state transitions. Quantile regression is used to estimate the <code>0.1</code> and <code>0.9</code> quantiles of the <code>with</code> risk as a function of the <code>without</code> risk. This allows one to readily see the typical changes in a <code>without</code> probability once <code>FFA_10_2</code> is known and added in the base model.</p>
+<p>To further visualize the diagnostic yield of <code>FFA_10_2</code>, the plot below estimates the <code>with FFA_10_2</code> vs <code>without FFA_10_2</code> risk probability for each event probability of the model. Quantile regression is used to estimate the <code>10%</code> and <code>90%</code> quantiles of the <code>with</code> risk as a function of the <code>without</code> risk. This allows one to readily see the typical changes to the <code>without</code> probability once <code>FFA_10_2</code> is known and added to the base model.</p>
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="1" data-layout-nrow="2">
+<div class="cell quarto-layout-panel" data-layout-ncol="1" data-layout-nrow="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
 <div id="fig-with-without-risk-probs-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -2741,7 +2741,7 @@ Figure&nbsp;14: Risk of having AD when either in HC or MCI state. See previous p
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="1" data-layout-nrow="2">
+<div class="cell quarto-layout-panel" data-layout-ncol="1" data-layout-nrow="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
 <div id="fig-with-without-risk-diff-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -2774,7 +2774,7 @@ Figure&nbsp;16: Risk probability difference for the risk of AD between the with 
 </section>
 <section id="sec-modelUpdate1" class="level2">
 <h2 class="anchored" data-anchor-id="sec-modelUpdate1">Model Update 1 - Testing For Non-linearities &amp; Interactions</h2>
-<p>The previous model that includes the <code>FFA_10_2</code> lipid to the <code>Age</code> &amp; <code>Mental_DisorderV2</code> base model, is now expanded with terms involving non-linearities and interactions, and then a backward term selection with probability calibration procedure is applied in order to identify the best terms to keep in the model.</p>
+<p>The previous model that included the <code>FFA_10_2</code> lipid to the <code>Age</code> &amp; <code>Mental_DisorderV2</code> base model, is now expanded with terms involving non-linearities and interactions, and then a backward term selection with probability calibration procedure is applied in order to identify the best terms to keep in the model.</p>
 <p>It seems that an interaction between the <code>FFA_10_2</code> lipid with both <code>Age</code> &amp; <code>Mental_DisorderV2</code> is plausible as the backward selection procedure kept terms involving these interactions. The interaction of <code>FFA_10_2</code> with <code>Age</code> can also be inferred from the plot <code>Age ~ LN3 | group</code> in the data processing page. Below is the model update as well as the REV analysis as in section <a href="#sec-REV1" class="quarto-xref">Section&nbsp;3.3</a>.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
@@ -2843,7 +2843,7 @@ Figure&nbsp;18: Actual versus predicted probabilities for the base model includi
 <img src="modeling_lipid_added_value_files/figure-html/fig-added_value_rev2-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-added_value_rev2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;19: It can be seen that there is overlap in the confidence regions of each predictor. Due to the small sample size of <strong><em>155</em></strong> observations, the intervals are quite wide. Compared to the previous model, now <strong><em>FFA_10_2</em></strong> aka LN3 has surpassed <strong><em>Age</em></strong> in importance, and it accounts for <strong><em>38%</em></strong> of the REV.
+Figure&nbsp;19: It can be seen that there is overlap in the confidence regions of each predictor. Due to the small sample size of <strong><em>155</em></strong> observations, the intervals are quite wide. Compared to the previous model, now <strong><em>FFA_10_2</em></strong> aka LN3 has surpassed <strong><em>Age</em></strong> in importance, and it accounts for <strong><em>38%</em></strong> of the total REV.
 </figcaption>
 </figure>
 </div>
@@ -2855,7 +2855,7 @@ Figure&nbsp;19: It can be seen that there is overlap in the confidence regions o
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="2" data-layout-nrow="3">
+<div class="cell quarto-layout-panel" data-layout-ncol="2" data-layout-nrow="3" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-upd-pdp-1-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -2938,7 +2938,7 @@ Figure&nbsp;25: Risk of having AD when either in HC or MCI state. Dependence on 
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-ncol="1" data-layout-nrow="2">
+<div class="cell quarto-layout-panel" data-layout-ncol="1" data-layout-nrow="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
 <div id="fig-upd-pdp-2-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -3779,7 +3779,7 @@ Figure&nbsp;35: Actual versus predicted probabilities for the base model includi
 <img src="modeling_lipid_added_value_files/figure-html/fig-added_value_rev3-1.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-added_value_rev3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;36: It can be seen that there is overlap in the confidence regions of each predictor. Due to the small sample size of <strong><em>155</em></strong> observations, the intervals are quite wide. <strong><em>FFA_10_2</em></strong> aka LN3 accounts for <strong><em>30%</em></strong> of the REV.
+Figure&nbsp;36: It can be seen that there is overlap in the confidence regions of each predictor. Due to the small sample size of <strong><em>155</em></strong> observations, the intervals are quite wide. <strong><em>FFA_10_2</em></strong> aka LN3 accounts for <strong><em>30%</em></strong> of the total REV.
 </figcaption>
 </figure>
 </div>
