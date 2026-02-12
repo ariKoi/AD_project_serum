@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-10">
+<meta name="dcterms.date" content="2026-02-12">
 
 <title>AD Project Serum - Modeling &amp; Assessing Lipid Added Value</title>
 <style>
@@ -171,6 +171,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Modeling</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./acknowledgments_AD_Project_Serum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acknowledgments</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -210,7 +216,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#model-likelihood-ratio-statistic-lr" id="toc-model-likelihood-ratio-statistic-lr" class="nav-link" data-scroll-target="#model-likelihood-ratio-statistic-lr">Model Likelihood Ratio Statistic (LR)</a></li>
   <li><a href="#model-update-2---expanded-model" id="toc-model-update-2---expanded-model" class="nav-link" data-scroll-target="#model-update-2---expanded-model">Model Update 2 - Expanded Model</a></li>
   <li><a href="#updated-partial-dependence-risk-profiles-1" id="toc-updated-partial-dependence-risk-profiles-1" class="nav-link" data-scroll-target="#updated-partial-dependence-risk-profiles-1">Updated Partial Dependence Risk Profiles</a></li>
-  <li><a href="#proportional-odds-assumption-po-1" id="toc-proportional-odds-assumption-po-1" class="nav-link" data-scroll-target="#proportional-odds-assumption-po-1">Proportional Odds Assumption (PO)</a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -232,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 10, 2026</p>
+      <p class="date">February 12, 2026</p>
     </div>
   </div>
   
@@ -247,7 +252,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="analysis-scope-and-modeling-summary" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-scope-and-modeling-summary">Analysis Scope and Modeling Summary</h3>
 <p>Alzheimer’s disease (AD) is a progressive neurodegenerative disorder, and early diagnosis remains a major challenge. In this study, we analyzed serum samples from individuals with AD (n=91), mild cognitive impairment (MCI; n=45), and healthy controls (HC; n=22) using a targeted UHPLC-MS/MS platform that quantified over 380 lipid species in both positive and negative ionization modes.</p>
-<p>Based on the modeling and lipid added value analysis in this study, the primary objectives was to identify potential lipid biomarkers, assess their predictive value after adjusting for clinical information and then develop a clinical prediction model for assessing the risk severity of Alzheimer’s disease.</p>
+<p>Based on the modeling and lipid added value analysis in this study, the primary objectives were to identify potential lipid biomarkers, assess their predictive value after adjusting for clinical information and then develop a clinical prediction model for assessing the risk severity of Alzheimer’s disease.</p>
 <p><strong>1. Clinical Base Model</strong> Researchers first established a “base model” using typical clinical data (Gender, Age, BMI, Diabetes, Heart Disease, Lung Disease, and Mental Disorders). Through backward elimination, they determined that <strong>Age</strong> and <strong>Mental Disorders (Depression/Anxiety)</strong> were the most significant clinical predictors for distinguishing between HC, MCI, and AD groups.</p>
 <p><strong>2. Integrating Lipid Biomarkers</strong> The study then explored how much predictive power could be added by including specific lipids. Key findings include:</p>
 <ul>
@@ -259,7 +264,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>The <strong>C-rank discrimination index</strong> (a measure of model accuracy) reached approximately <strong>0.88-0.89</strong>, indicating high performance in distinguishing disease severity.</li>
 <li>Calibration curves demonstrated that the model is well-calibrated, particularly for predicting the transition to AD, with a significant reduction in error compared to models relying solely on clinical data.</li>
 </ul>
-<p><strong>4. Conclusion on Added Value</strong> The analysis concludes that specific serum lipids provide substantial “added value” to traditional clinical assessments. By accounting for non-linearities and interactions between lipids and patient demographics, the study moves toward a more precise clinical prediction tool for Alzheimer’s diagnosis.</p>
+<p><strong>4. Conclusion on Added Value</strong> The analysis concludes that specific serum lipids have the potential to provide “added value” to traditional clinical assessments. By accounting for non-linearities and interactions between lipids and patient demographics, the study moves toward a more precise clinical prediction tool for Alzheimer’s diagnosis.</p>
 </section>
 <section id="base-clinical-data-model" class="level1 page-columns page-full" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Base Clinical Data &amp; Model</h1>
@@ -851,7 +856,7 @@ Figure&nbsp;1: The further away the central estimate and its corresponding inter
 </section>
 <section id="variable-selection" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="variable-selection">Variable Selection</h2>
-<p>From the variable effects above, <code>Age</code> and <code>Mental_DisorderV2</code> seem to be the variables that contribute the most in the model. For assessing lipid added value, a more parsimonious model can be used that best approximates the full model above. In order to so this, a stepwise backward selection procedure is applied with the following results.</p>
+<p>From the variable effects above, <code>Age</code> and <code>Mental_DisorderV2</code> seem to be the variables that contribute the most in the model. For assessing lipid added value, a more parsimonious model can be used that best approximates the full model above. In order to do this, a stepwise backward selection procedure is applied with the following results.</p>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
 <pre><code>
@@ -953,7 +958,7 @@ Figure&nbsp;3: Actual versus predicted probabilities for the reduced model havin
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-nrow="1" data-layout-ncol="2">
+<div class="cell quarto-layout-panel" data-layout-nrow="1" data-layout-ncol="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-fmodel2_fastbw2_AgeLinear_bw-pdp1-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -987,7 +992,7 @@ Figure&nbsp;5: Risk of having AD when either in HC or MCI state. Different curve
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-nrow="1" data-layout-ncol="2">
+<div class="cell quarto-layout-panel" data-layout-nrow="1" data-layout-ncol="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-fmodel2_fastbw2_AgeLinear_bw-pdp2-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -1021,7 +1026,7 @@ Figure&nbsp;7: Risk of having AD when either in HC or MCI state, and Age is 73.
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-nrow="1" data-layout-ncol="2">
+<div class="cell quarto-layout-panel" data-layout-nrow="1" data-layout-ncol="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-fmodel2_fastbw2_AgeLinear_bw-pdp3-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -2720,7 +2725,7 @@ Figure&nbsp;12: It can be seen that there is overlap in the confidence regions o
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-nrow="2" data-layout-ncol="1">
+<div class="cell quarto-layout-panel" data-layout-nrow="2" data-layout-ncol="1" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
 <div id="fig-with-without-risk-probs-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -2750,11 +2755,50 @@ Figure&nbsp;14: Risk of having AD when either in HC or MCI state. See previous p
 </div>
 </div>
 </div>
-<p>By plotting the <code>without-with</code> model risk <code>difference</code> vs <code>Age</code> we can easily see the dependence on <code>Age</code> of the added value of the <code>FFA_10_2</code> lipid. Result is shown after adjusting for <code>Mental_DisorderV2 = DepAnx</code>.</p>
+<p><strong><em>Figure 13</em></strong> focuses on the predictive impact of lipid FFA_10_2 on MCI/AD Risk. This analysis evaluates the diagnostic utility of adding the lipid biomarker <strong>FFA_10_2</strong> to a baseline clinical model (Age + Mental_DisorderV2) for predicting the transition from Healthy Control (HC) to Mild Cognitive Impairment (MCI) or Alzheimer’s Disease (AD).</p>
+<p>The plot compares a baseline clinical model (X-axis) against an enhanced model including the lipid FFA_10_2 (Y-axis).</p>
+<ul>
+<li><strong>Deviation from Diagonal:</strong> The spread of data points away from the line indicates that FFA_10_2 provides unique biological information not captured by age or mental health history.</li>
+<li><strong>Asymmetric Reclassification:</strong> The <strong>10% quantile (solid orange line)</strong> shows a more pronounced deviation from the diagonal than the <strong>90% quantile (solid red line)</strong>. This suggests the lipid is more aggressive at <strong>down-weighting risk</strong> for “false alarms” in the mid-range than it is at upwardly revising risk for others.</li>
+</ul>
+<p>The inclusion of the lipid marker creates distinct behavioral shifts across different risk strata:</p>
+<ul>
+<li><strong>The “Refinement” Zone (Risk &lt; 0.74):</strong> In the low-to-moderate risk categories, the lipid acts as a filter. It significantly lowers the risk probability for a subset of individuals (seen by points falling toward the orange 10% quantile), effectively “clearing” them despite their age or mental health markers.</li>
+<li><strong>The “Confirmatory” Zone (Risk &gt; 0.74):</strong> Once the baseline risk exceeds the 74% threshold (pink dashed line), the model shows high convergence. The lipid marker largely confirms the high-risk status, with data points clustering tightly toward a probability of 1.00.</li>
+</ul>
+<p>Clinical Implications:</p>
+<ul>
+<li><strong>Increased Specificity:</strong> By pulling “medium-risk” individuals toward a lower probability score (downward reclassification), the lipid likely reduces false positives, making the model a more precise tool for clinical trial recruitment or early intervention.</li>
+<li><strong>Correlation at Extremes:</strong> For high-risk individuals, the lipid and clinical markers are highly concordant, reinforcing the confidence in a likely progression to MCI or AD.</li>
+</ul>
+<hr>
+<p><strong><em>Figure 14</em></strong> follows the same logic as the previous one, but it focuses on a more severe transition: the risk of having <strong>Alzheimer’s Disease (AD)</strong> specifically, starting from either a Healthy Control (HC) or Mild Cognitive Impairment (MCI) state.</p>
+<p>Comparing this to the previous plot, there are several critical shifts in how the lipid <strong>FFA_10_2</strong> behaves when predicting full AD progression:</p>
+<p>Unlike the previous plot where the lipid primarily “cleared” people by lowering risk, here the behavior is flipped i.e.&nbsp;a shift toward upward reclassification:</p>
+<ul>
+<li><p><strong>The 90% Quantile (solid red line)</strong> is significantly further from the diagonal than the <strong>10% Quantile (solid orange line)</strong>.</p></li>
+<li><p>The <strong>solid orange line</strong> sits almost exactly on top of the <strong>90% mirror (dashed red line)</strong>.</p></li>
+<li><p><strong>Interpretation:</strong> This indicates that for the transition to full AD, the lipid is much more aggressive at <strong>increasing</strong> the risk probability for individuals than it is at decreasing it. It acts as a “red flag” marker.</p></li>
+<li><p>Between the 0.20 and 0.75 marks on the X-axis, the blue dots are widely scattered.</p></li>
+<li><p>This shows that for patients where clinical markers (Age + Mental Health) suggest a moderate risk, the lipid <strong>FFA_10_2</strong> can radically change the diagnosis, often pushing them significantly higher or lower on the Y-axis.</p></li>
+</ul>
+<p>Key Risk Thresholds:</p>
+<ul>
+<li><strong>The 83% Risk Threshold (pink dashed line):</strong> This plot uses a higher “high-risk” marker (83%) compared to the 74% in the previous plot.</li>
+<li><strong>Confirmation at the Extremes:</strong> For patients already at &gt;0.90 risk based on clinical factors, the lipid marker converges tightly at the 1.00 mark, essentially confirming the AD diagnosis with near certainty.</li>
+</ul>
+<p>In summary:</p>
+<ul>
+<li><strong>Enhanced Sensitivity:</strong> In the transition to full AD, FFA_10_2 serves as a strong <strong>positive predictor</strong>. The model reclassifies many individuals “upward,” suggesting the lipid is highly sensitive to biological changes that precede clinical AD.</li>
+<li><strong>Increased Model Spread:</strong> The wider gap between the 90% and 10% quantiles (compared to Figure 13) demonstrates that this lipid provides more “corrective” power when diagnosing full AD than when diagnosing general MCI.</li>
+<li><strong>Diagnostic Certainty:</strong> The lipid acts as a confirmatory biomarker for high-risk patients (X &gt; 0.83), where the model consistently pushes risk probabilities toward the 1.00 ceiling.</li>
+</ul>
+<hr>
+<p>By plotting the <code>with-without</code> model risk <code>difference</code> vs <code>Age</code> we can easily see the dependence on <code>Age</code> of the added value of the <code>FFA_10_2</code> lipid. Result is shown after adjusting for <code>Mental_DisorderV2 = DepAnx</code>.</p>
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-nrow="2" data-layout-ncol="1">
+<div class="cell quarto-layout-panel" data-layout-nrow="2" data-layout-ncol="1" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
 <div id="fig-with-without-risk-diff-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -2784,6 +2828,68 @@ Figure&nbsp;16: Risk probability difference for the risk of AD between the with 
 </div>
 </div>
 </div>
+<p>This third plot (<strong>Figure 15</strong>) provides a more granular look at the data from (<strong>Figure 13</strong>) by showing the <strong>mathematical difference</strong> between the two models as it relates specifically to <strong>Age</strong>.</p>
+<p>The Y-Axis represents the “Lipid Effect”:</p>
+<ul>
+<li><strong>Positive values (above 0.00):</strong> Adding the lipid <strong>increased</strong> the predicted risk for that person.</li>
+<li><strong>Negative values (below 0.00):</strong> Adding the lipid <strong>decreased</strong> the predicted risk.</li>
+<li><strong>The center line (0.00):</strong> The lipid had zero effect on the prediction.</li>
+</ul>
+<p>The X-Axis is the age dependence:</p>
+<p>Unlike the previous plots, this shows that the lipid’s influence is <strong>strongest in younger individuals</strong> and diminishes as patients get older.</p>
+<ul>
+<li><strong>Younger Patients (Age 18–50):</strong> There is a wide “fan” of risk adjustments. The lipid is doing a lot of heavy lifting here because clinical factors like age aren’t yet strong predictors of cognitive decline.</li>
+<li><strong>Older Patients (Age 75+):</strong> The dots and quantile lines converge toward zero. This means that for the very elderly, the lipid provides very little <em>additional</em> information beyond what we already know from their age and mental health history.</li>
+</ul>
+<p>Looking at the plot asymmetry, and in this specific view (Figure 15), which is adjusted for Mental_DisorderV2 = DepAnx, the lipid FFA_10_2 has a “pro-risk” bias.</p>
+<p>Upward Revision is Stronger: The model is more likely to significantly increase a younger person’s risk score than it is to significantly decrease it.</p>
+<p>Age Sensitivity: This “risk-increasing” effect is most volatile between ages 45 and 65, where we see several dark purple dots (individual patients) receiving a risk boost of +0.10 to +0.15 (10% to 15%).</p>
+<p>Diminishing Returns: As Age increases toward 90, the lipid’s ability to move the needle (in either direction) shrinks toward zero, as age itself becomes the dominant predictor.</p>
+<p>The color coding (Frequency) shows that the most common result (yellow/green dots) occurs in the 70–85 age bracket, where the lipid’s impact is relatively small (between -0.02 and +0.02). The most “dramatic” reclassifications (the outliers) are happening in middle-aged individuals.</p>
+<hr>
+<p>In the same spirit as <strong>Figure 15</strong>, <strong>Figure 16</strong> illustrates how the <strong>FFA_10_2 lipid</strong> influences the specific risk of Alzheimer’s Disease (AD) progression across different ages. While similar in structure to the previous age-dependence plot, the dynamics of AD risk prediction are notably more volatile.</p>
+<p>We can observe a “risk inflation” effect. Unlike the general “MCI or AD” plot where adjustments narrowed as patients aged, <strong>Figure 16</strong> shows that for the specific transition to AD, the lipid’s impact remains significant even into the 70s.</p>
+<ul>
+<li><strong>The 90% Quantile (Red Solid Line):</strong> This curve peaks significantly higher than the previous model. In the age 60–75 bracket, adding the lipid can increase an individual’s AD risk probability by as much as <strong>15% to 25%</strong> (represented by the high purple outliers).</li>
+<li><strong>Asymmetry:</strong> The solid red line (upward risk revision) is much further from the 0.00 baseline than the solid orange line is. This indicates that for the AD event, the lipid is primarily a <strong>risk-identifying marker</strong> rather than a “risk-clearing” one.</li>
+</ul>
+<p>Peak Volatility (Ages 60–75):</p>
+<ul>
+<li>The spread between the quantiles is widest during the typical onset window for AD (60–75 years).</li>
+<li>The vertical pink dashed line at approximately <strong>age 74</strong> marks a point of extreme divergence. Here, we see the most frequent adjustments, suggesting that for seniors in this age group, the lipid marker is a critical deciding factor that can swing a diagnosis significantly in either direction.</li>
+</ul>
+<p>Looking at the bottom of the plot, the <strong>solid orange line (10% quantile)</strong> sits <strong>well above</strong> the <strong>dot-dashed line (mirror of the 90% quantile)</strong>. This statistically confirms a “positive bias.” The model’s capacity to increase a patient’s AD risk based on this lipid is much greater than its capacity to decrease it.</p>
+<hr>
+<section id="summary-the-role-of-ffa_10_2" class="level4">
+<h4 class="anchored" data-anchor-id="summary-the-role-of-ffa_10_2">Summary: The Role of FFA_10_2</h4>
+<p>Combining all the plots, we can conclude the following:</p>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Transition Stage</th>
+<th>Primary Role of FFA_10_2</th>
+<th>Age Sensitivity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>HC → MCI/AD</strong></td>
+<td>Acts as a <strong>filter</strong>. Primarily helps lower risk scores for younger, “false alarm” cases.</td>
+<td>Most impactful for younger patients (&lt;60).</td>
+</tr>
+<tr class="even">
+<td><strong>HC/MCI → AD</strong></td>
+<td>Acts as a <strong>red flag</strong>. Primarily increases risk scores, providing high-confidence identification of AD progression.</td>
+<td>Most impactful for senior patients (60–75).</td>
+</tr>
+</tbody>
+</table>
+</section>
 </section>
 <section id="sec-modelUpdate1" class="level2">
 <h2 class="anchored" data-anchor-id="sec-modelUpdate1">Model Update 1 - Testing For Non-linearities &amp; Interactions</h2>
@@ -2868,7 +2974,7 @@ Figure&nbsp;19: It can be seen that there is overlap in the confidence regions o
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-nrow="3" data-layout-ncol="2">
+<div class="cell quarto-layout-panel" data-layout-nrow="3" data-layout-ncol="2" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
 <div id="fig-upd-pdp-1-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -2951,7 +3057,7 @@ Figure&nbsp;25: Risk of having AD when either in HC or MCI state. Dependence on 
 <div>
 
 </div>
-<div class="cell quarto-layout-panel" data-layout-align="center" data-layout-nrow="2" data-layout-ncol="1">
+<div class="cell quarto-layout-panel" data-layout-nrow="2" data-layout-ncol="1" data-layout-align="center">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
 <div id="fig-upd-pdp-2-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
@@ -3045,7 +3151,7 @@ LN111 -0.3001981 -0.2249528  1.0000000</code></pre>
 <div aria-describedby="fig-PO-score.binary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-score.binary" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-score.binary-1" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-score.binary-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-score.binary-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-score.binary-1.png" id="fig-PO-score.binary-1" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-score.binary" width="672">
@@ -3057,7 +3163,7 @@ LN111 -0.3001981 -0.2249528  1.0000000</code></pre>
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-score.binary" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-score.binary-2" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-score.binary-2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-score.binary-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-score.binary-2.png" id="fig-PO-score.binary-2" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-score.binary" width="672">
@@ -3069,7 +3175,7 @@ LN111 -0.3001981 -0.2249528  1.0000000</code></pre>
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-score.binary" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-score.binary-3" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-score.binary-3" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-score.binary-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-score.binary-3.png" id="fig-PO-score.binary-3" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-score.binary" width="672">
@@ -3083,7 +3189,7 @@ LN111 -0.3001981 -0.2249528  1.0000000</code></pre>
 </div>
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-score.binary" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-score.binary-4" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-score.binary-4" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-score.binary-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-score.binary-4.png" id="fig-PO-score.binary-4" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-score.binary" width="672">
@@ -3095,7 +3201,7 @@ LN111 -0.3001981 -0.2249528  1.0000000</code></pre>
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-score.binary" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-score.binary-5" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-score.binary-5" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-score.binary-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-score.binary-5.png" id="fig-PO-score.binary-5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-score.binary" width="672">
@@ -3119,7 +3225,7 @@ Figure&nbsp;28: Model residuals i.e.&nbsp;comparing observed with predicted resp
 <div aria-describedby="fig-PO-partial-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-partial" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-partial-1" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-partial-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-partial-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-partial-1.png" id="fig-PO-partial-1" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-partial" width="672">
@@ -3131,7 +3237,7 @@ Figure&nbsp;28: Model residuals i.e.&nbsp;comparing observed with predicted resp
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-partial" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-partial-2" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-partial-2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-partial-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-partial-2.png" id="fig-PO-partial-2" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-partial" width="672">
@@ -3143,7 +3249,7 @@ Figure&nbsp;28: Model residuals i.e.&nbsp;comparing observed with predicted resp
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-partial" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-partial-3" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-partial-3" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-partial-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-partial-3.png" id="fig-PO-partial-3" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-partial" width="672">
@@ -3157,7 +3263,7 @@ Figure&nbsp;28: Model residuals i.e.&nbsp;comparing observed with predicted resp
 </div>
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-partial" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-partial-4" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-partial-4" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-partial-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-partial-4.png" id="fig-PO-partial-4" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-partial" width="672">
@@ -3169,7 +3275,7 @@ Figure&nbsp;28: Model residuals i.e.&nbsp;comparing observed with predicted resp
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-PO-partial" style="flex-basis: 33.3%;justify-content: center;">
-<div id="fig-PO-partial-5" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-PO-partial-5" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-PO-partial-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-PO-partial-5.png" id="fig-PO-partial-5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-PO-partial" width="672">
@@ -3807,7 +3913,7 @@ Figure&nbsp;36: It can be seen that there is overlap in the confidence regions o
 <div aria-describedby="fig-upd-pdp-net-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-1" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-1-1" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-upd-pdp-net-1-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-1-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-1-1.png" id="fig-upd-pdp-net-1-1" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-1" width="672">
@@ -3819,7 +3925,7 @@ Figure&nbsp;36: It can be seen that there is overlap in the confidence regions o
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-1" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-1-2" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-upd-pdp-net-1-2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-1-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-1-2.png" id="fig-upd-pdp-net-1-2" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-1" width="672">
@@ -3833,7 +3939,7 @@ Figure&nbsp;36: It can be seen that there is overlap in the confidence regions o
 </div>
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-1" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-1-3" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-upd-pdp-net-1-3" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-1-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-1-3.png" id="fig-upd-pdp-net-1-3" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-1" width="672">
@@ -3845,7 +3951,7 @@ Figure&nbsp;36: It can be seen that there is overlap in the confidence regions o
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-1" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-1-4" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-upd-pdp-net-1-4" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-1-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-1-4.png" id="fig-upd-pdp-net-1-4" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-1" width="672">
@@ -3859,7 +3965,7 @@ Figure&nbsp;36: It can be seen that there is overlap in the confidence regions o
 </div>
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-1" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-1-5" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-upd-pdp-net-1-5" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-1-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-1-5.png" id="fig-upd-pdp-net-1-5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-1" width="672">
@@ -3871,7 +3977,7 @@ Figure&nbsp;36: It can be seen that there is overlap in the confidence regions o
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-1" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-1-6" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-upd-pdp-net-1-6" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-1-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-1-6.png" id="fig-upd-pdp-net-1-6" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-1" width="672">
@@ -3885,7 +3991,7 @@ Figure&nbsp;36: It can be seen that there is overlap in the confidence regions o
 </div>
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-1" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-1-7" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-upd-pdp-net-1-7" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-1-7-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-1-7.png" id="fig-upd-pdp-net-1-7" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-1" width="672">
@@ -3897,7 +4003,7 @@ Figure&nbsp;36: It can be seen that there is overlap in the confidence regions o
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-1" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-1-8" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-upd-pdp-net-1-8" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-1-8-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-1-8.png" id="fig-upd-pdp-net-1-8" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-1" width="672">
@@ -3911,7 +4017,7 @@ Figure&nbsp;36: It can be seen that there is overlap in the confidence regions o
 </div>
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-1" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-1-9" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-upd-pdp-net-1-9" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-1-9-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-1-9.png" id="fig-upd-pdp-net-1-9" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-1" width="672">
@@ -3923,7 +4029,7 @@ Figure&nbsp;36: It can be seen that there is overlap in the confidence regions o
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-1" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-1-10" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-upd-pdp-net-1-10" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-1-10-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-1-10.png" id="fig-upd-pdp-net-1-10" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-1" width="672">
@@ -3937,7 +4043,7 @@ Figure&nbsp;36: It can be seen that there is overlap in the confidence regions o
 </div>
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-1" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-1-11" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-upd-pdp-net-1-11" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-1-11-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-1-11.png" id="fig-upd-pdp-net-1-11" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-1" width="672">
@@ -3949,7 +4055,7 @@ Figure&nbsp;36: It can be seen that there is overlap in the confidence regions o
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-1" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-1-12" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-upd-pdp-net-1-12" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-1-12-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-1-12.png" id="fig-upd-pdp-net-1-12" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-1" width="672">
@@ -3963,7 +4069,7 @@ Figure&nbsp;36: It can be seen that there is overlap in the confidence regions o
 </div>
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-1" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-1-13" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-upd-pdp-net-1-13" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-1-13-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-1-13.png" id="fig-upd-pdp-net-1-13" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-1" width="672">
@@ -3975,7 +4081,7 @@ Figure&nbsp;36: It can be seen that there is overlap in the confidence regions o
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-1" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-1-14" class="quarto-figure quarto-figure-center quarto-float anchored" width="672" data-fig-align="center">
+<div id="fig-upd-pdp-net-1-14" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="672">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-1-14-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-1-14.png" id="fig-upd-pdp-net-1-14" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-1" width="672">
@@ -3999,7 +4105,7 @@ Figure&nbsp;37: (At each row) Left graph: Risk of condition severity: When in HC
 <div aria-describedby="fig-upd-pdp-net-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-2" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-2-1" class="quarto-figure quarto-figure-center quarto-float anchored" width="960" data-fig-align="center">
+<div id="fig-upd-pdp-net-2-1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="960">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-2-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-2-1.png" id="fig-upd-pdp-net-2-1" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-2" width="960">
@@ -4011,7 +4117,7 @@ Figure&nbsp;37: (At each row) Left graph: Risk of condition severity: When in HC
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-2" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-2-2" class="quarto-figure quarto-figure-center quarto-float anchored" width="960" data-fig-align="center">
+<div id="fig-upd-pdp-net-2-2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="960">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-2-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-2-2.png" id="fig-upd-pdp-net-2-2" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-2" width="960">
@@ -4025,7 +4131,7 @@ Figure&nbsp;37: (At each row) Left graph: Risk of condition severity: When in HC
 </div>
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-2" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-2-3" class="quarto-figure quarto-figure-center quarto-float anchored" width="960" data-fig-align="center">
+<div id="fig-upd-pdp-net-2-3" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="960">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-2-3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-2-3.png" id="fig-upd-pdp-net-2-3" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-2" width="960">
@@ -4037,7 +4143,7 @@ Figure&nbsp;37: (At each row) Left graph: Risk of condition severity: When in HC
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-2" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-2-4" class="quarto-figure quarto-figure-center quarto-float anchored" width="960" data-fig-align="center">
+<div id="fig-upd-pdp-net-2-4" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="960">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-2-4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-2-4.png" id="fig-upd-pdp-net-2-4" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-2" width="960">
@@ -4051,7 +4157,7 @@ Figure&nbsp;37: (At each row) Left graph: Risk of condition severity: When in HC
 </div>
 <div class="quarto-layout-row">
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-2" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-2-5" class="quarto-figure quarto-figure-center quarto-float anchored" width="960" data-fig-align="center">
+<div id="fig-upd-pdp-net-2-5" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="960">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-2-5-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-2-5.png" id="fig-upd-pdp-net-2-5" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-2" width="960">
@@ -4063,7 +4169,7 @@ Figure&nbsp;37: (At each row) Left graph: Risk of condition severity: When in HC
 </div>
 </div>
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-upd-pdp-net-2" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-upd-pdp-net-2-6" class="quarto-figure quarto-figure-center quarto-float anchored" width="960" data-fig-align="center">
+<div id="fig-upd-pdp-net-2-6" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center" width="960">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-upd-pdp-net-2-6-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="modeling_lipid_added_value_files/figure-html/fig-upd-pdp-net-2-6.png" id="fig-upd-pdp-net-2-6" class="img-fluid quarto-figure quarto-figure-center anchored figure-img" data-ref-parent="fig-upd-pdp-net-2" width="960">
@@ -4081,9 +4187,6 @@ Figure&nbsp;38: (At each row) Left graph: Risk of condition severity: When in HC
 </figcaption>
 </figure>
 </div>
-</section>
-<section id="proportional-odds-assumption-po-1" class="level3">
-<h3 class="anchored" data-anchor-id="proportional-odds-assumption-po-1">Proportional Odds Assumption (PO)</h3>
 
 
 </section>

@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-10">
+<meta name="dcterms.date" content="2026-02-12">
 
 <title>AD Project Serum - Data Description/Processing - AD Meta Data &amp; Lipids</title>
 <style>
@@ -171,6 +171,12 @@ window.Quarto = {
  <span class="menu-text">Modeling</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./acknowledgments_AD_Project_Serum.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Acknowledgments</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -183,7 +189,11 @@ window.Quarto = {
     <h2 id="toc-title">Clinical Data (With Selected Lipids)</h2>
    
   <ul>
-  <li><a href="#notes-quick-descriptives" id="toc-notes-quick-descriptives" class="nav-link active" data-scroll-target="#notes-quick-descriptives">Notes &amp; Quick Descriptives</a></li>
+  <li><a href="#cohort-demographics-and-clinical-data" id="toc-cohort-demographics-and-clinical-data" class="nav-link active" data-scroll-target="#cohort-demographics-and-clinical-data">1. Cohort Demographics and Clinical Data</a></li>
+  <li><a href="#data-processing-and-imputation" id="toc-data-processing-and-imputation" class="nav-link" data-scroll-target="#data-processing-and-imputation">2. Data Processing and Imputation</a></li>
+  <li><a href="#exploratory-data-analysis-eda-lipids-vs.-clinical-factors" id="toc-exploratory-data-analysis-eda-lipids-vs.-clinical-factors" class="nav-link" data-scroll-target="#exploratory-data-analysis-eda-lipids-vs.-clinical-factors">3. Exploratory Data Analysis (EDA): Lipids vs.&nbsp;Clinical Factors</a></li>
+  <li><a href="#categorical-variables" id="toc-categorical-variables" class="nav-link" data-scroll-target="#categorical-variables">4. Categorical Variables</a></li>
+  <li><a href="#notes-quick-descriptives" id="toc-notes-quick-descriptives" class="nav-link" data-scroll-target="#notes-quick-descriptives">Notes &amp; Quick Descriptives</a></li>
   <li><a href="#multiple-imputation" id="toc-multiple-imputation" class="nav-link" data-scroll-target="#multiple-imputation">Multiple Imputation</a></li>
   <li><a href="#data-descriptions-eda" id="toc-data-descriptions-eda" class="nav-link" data-scroll-target="#data-descriptions-eda">Data Descriptions &amp; EDA</a></li>
   <li><a href="#age-vs-lipids" id="toc-age-vs-lipids" class="nav-link" data-scroll-target="#age-vs-lipids"><span class="header-section-number">1</span> Age Vs Lipids</a>
@@ -210,7 +220,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">February 10, 2026</p>
+      <p class="date">February 12, 2026</p>
     </div>
   </div>
   
@@ -222,6 +232,50 @@ window.Quarto = {
 </header>
 
 
+<p>This page provides a comprehensive overview of the dataset and the initial processing steps for the Alzheimer’s disease serum project.</p>
+<p>Here is a summary of the key findings:</p>
+<section id="cohort-demographics-and-clinical-data" class="level3">
+<h3 class="anchored" data-anchor-id="cohort-demographics-and-clinical-data">1. Cohort Demographics and Clinical Data</h3>
+<p>The study involved 155 participants, categorized into three unbalanced groups:</p>
+<ul>
+<li><strong>Alzheimer’s Disease (AD):</strong> 57.4% (<span class="math inline">\(n=89\)</span>)</li>
+<li><strong>Mild Cognitive Impairment (MCI):</strong> 28.4% (<span class="math inline">\(n=4\)</span>)</li>
+<li><strong>Healthy Control (HC):</strong> 14.2% (<span class="math inline">\(n=22\)</span>)</li>
+</ul>
+<p><strong>Key Clinical Stats:</strong></p>
+<ul>
+<li><strong>Age:</strong> Median age of 73 years. Age significantly correlated with disease severity (Kruskal-Wallis ), with AD patients generally being older.</li>
+<li><strong>Gender:</strong> Fairly balanced (54.2% Female, 45.8% Male).</li>
+<li><strong>BMI:</strong> Median 26.6. About 25% of BMI values were missing initially.</li>
+<li><strong>MMSE (Mini-Mental State Examination):</strong> Median score of 24. Scores were significantly lower in the AD group (median 20) compared to HC (median 29).</li>
+<li><strong>Mental Disorders:</strong> Depression and Anxiety (DepAnx) were present in 59.6% of the cohort and showed a significant association with the clinical groups (<span class="math inline">\(p &lt; 0.001\)</span>).</li>
+</ul>
+</section>
+<section id="data-processing-and-imputation" class="level3">
+<h3 class="anchored" data-anchor-id="data-processing-and-imputation">2. Data Processing and Imputation</h3>
+<ul>
+<li><strong>Missing Values:</strong> Significant missingness was noted in BMI (25%), medications, and specific disease histories.</li>
+<li><strong>Multiple Imputation:</strong> To handle these gaps, researchers used a <strong>Random Forest algorithm</strong> to multiply impute missing values. All subsequent Exploratory Data Analysis (EDA) and modeling were performed on this imputed dataset.</li>
+</ul>
+</section>
+<section id="exploratory-data-analysis-eda-lipids-vs.-clinical-factors" class="level3">
+<h3 class="anchored" data-anchor-id="exploratory-data-analysis-eda-lipids-vs.-clinical-factors">3. Exploratory Data Analysis (EDA): Lipids vs.&nbsp;Clinical Factors</h3>
+<p>The analysis looked for correlations between specific lipid species and demographic factors:</p>
+<ul>
+<li><strong>Age vs.&nbsp;Lipids:</strong> Several Free Fatty Acids (FFAs) and Lysophosphatidic acids (LPAs) showed positive correlations with age. For example, <strong>FFA(10:2)</strong> (also known as LN3) had a Spearman correlation of <strong>0.472</strong> with age.</li>
+<li><strong>Disease Severity vs.&nbsp;Lipids:</strong> * <strong>FFA(10:2)</strong> showed a very strong association with disease groups (<span class="math inline">\(p &lt; 0.001\)</span>), with higher concentrations appearing in the AD group.</li>
+<li>Proportions of AD patients increased significantly in the higher quantiles of FFA(10:2) concentration (100% of the top quantile were AD patients).</li>
+</ul>
+</section>
+<section id="categorical-variables" class="level3 page-columns page-full">
+<h3 class="anchored" data-anchor-id="categorical-variables">4. Categorical Variables</h3>
+<p>The study simplified several categorical variables for modeling:</p>
+<ul>
+<li><strong>Heart Disease:</strong> Aggregated into categories like “Lipid Disorders,” “MACE” (Major Adverse Cardiovascular Events), and “Hypertension Related.”</li>
+<li><strong>Medications:</strong> Initially very diverse (123 distinct types), requiring aggregation for meaningful statistical analysis.</li>
+</ul>
+<p>This processing stage sets the foundation for the predictive modeling found in the later stages of the project, confirming that age and specific lipids like <strong>FFA(10:2)</strong> are critical variables to track.</p>
+<hr>
 <p>There are 3 ids present in the lipid data but not in the meta data: Their ids are “3797b”, “Missing” and “missing”.</p>
 <p>The final data set that will be used for modeling and exploratory data analysis is shown below, together with its statistical descriptions.</p>
 <div class="cell">
@@ -242,6 +296,7 @@ window.Quarto = {
 <div class="cell column-screen">
 
 </div>
+</section>
 <section id="notes-quick-descriptives" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="notes-quick-descriptives">Notes &amp; Quick Descriptives</h2>
 <p>About 1/4 of the observations have a missing BMI.</p>
